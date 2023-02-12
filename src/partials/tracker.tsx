@@ -1,19 +1,20 @@
 import React from "react";
-import Bill from "bill";
+import Item from "./item";
 
-import { Bills } from "../types";
+import { Bill } from "../types";
 interface TrackerProps {
-  tableTitle: string;
-  data: Bills;
+  title: string;
+  data: Bill[];
 }
 
 function Tracker(props: TrackerProps) {
   return (
     <div>
+      <div className="table-title">Bill Tracker</div>
       <div className="table-title"></div>
-      {props.data.bills.map((bill, index) => (
+      {props.data.map((bill, index) => (
         <div key={index}>
-          <Bill
+          <Item
             type={bill.type}
             number={bill.number}
             title={bill.title}
@@ -25,3 +26,5 @@ function Tracker(props: TrackerProps) {
     </div>
   );
 }
+
+export default Tracker;

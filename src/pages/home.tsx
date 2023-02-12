@@ -4,9 +4,10 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
+import Tracker from "../partials/tracker"
 
 // Mock Data
-import bills from "./mocks.bills.json";
+import billData from "../mocks/bills.json";
 
 function Home() {
   return (
@@ -26,6 +27,9 @@ function Home() {
             </Toolbar>
           </AppBar>
         </Box>
+      </div>
+      <div>
+	<Tracker data={billData.bills} title="Bill Tracker" />
       </div>
     </div>
   );
