@@ -1,4 +1,5 @@
 import React from "react";
+import Selector from "./selector";
 
 interface ItemProps {
   type: string;
@@ -8,24 +9,28 @@ interface ItemProps {
   latestActionDate: string;
 }
 
+
 function Item(props: ItemProps) {
   return (
-    <div className="bill">
+    <div className="item">
       <div className="text-container">
-        <div>
+        <div className="item-hr">
           <p>{props.type + " " + props.number}</p>
         </div>
-        <div>
+        <div className="item-title">
           <p>{props.title}</p>
         </div>
-        <div>
+        <div className="item-action-text">
           <p>{props.latestActionText}</p>
         </div>
-        <p>{props.latestActionDate}</p>
-        <div>
-          <p></p>
+        <div className="item-action-date">
+          <p>{props.latestActionDate}</p>
         </div>
       </div>
+        <div className="item-button-container">
+	<div>Do you support this Bill?</div>
+          <Selector />
+        </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ export interface LatestAction {
 }
 
 export interface Bill {
-  congress: number| string;
+  congress: number | string;
   latestAction: LatestAction;
   number: string;
   originChamber: string;
@@ -16,4 +16,3 @@ export interface Bill {
   updateDateIncludingText: string;
   url: string;
 }
-

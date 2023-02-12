@@ -2,6 +2,7 @@ import React from "react";
 import Item from "./item";
 
 import { Bill } from "../types";
+
 interface TrackerProps {
   title: string;
   data: Bill[];
@@ -9,9 +10,8 @@ interface TrackerProps {
 
 function Tracker(props: TrackerProps) {
   return (
-    <div>
+    <div className="tracker">
       <div className="table-title">Bill Tracker</div>
-      <div className="table-title"></div>
       {props.data.map((bill, index) => (
         <div key={index}>
           <Item
